@@ -1,4 +1,4 @@
-name: Merge Request Actions
+name: Push Request Actions
 
 on:
   push:
