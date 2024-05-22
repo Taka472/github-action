@@ -1,0 +1,34 @@
+name: Cron Actions
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run-integration-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      #Setting the direction to execute actions
+      defaults:
+        run:
+          working-directory: cron-example
+
+      # Setup NodeJS
+      - name: Setup NodeJS 12
+        uses: actions/setup-node@v1
+        with:
+          node-version: "12.x"
+
+      # Install yarn
+      - name: Install yarn
+        run: npm install --global yarn
+      
+      # Install libraries
+      - name: Install libraries
+        run: yarn install --frozen-lockfile
+
+      # Execute tests
+      - name: Execute tests
+        run: yarn test
