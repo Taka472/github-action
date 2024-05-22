@@ -7,13 +7,13 @@ jobs:
   run-integration-tests:
     runs-on: ubuntu-latest
 
+    #Setting the direction to execute actions
+    defaults:
+      run:
+        working-directory: cron-example
+
     steps:
       - uses: actions/checkout@v2
-
-      #Setting the direction to execute actions
-      defaults:
-        run:
-          working-directory: cron-example
 
       # Setup NodeJS
       - name: Setup NodeJS 12
