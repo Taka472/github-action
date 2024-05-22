@@ -7,6 +7,6 @@ jobs:
   print-hello-world:
     runs-on: ubuntu-lastest
 
-    step:
+    steps:
       - name: Say hello
       - run: echo "Hello world"
