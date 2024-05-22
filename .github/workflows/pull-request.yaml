@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  pull request:
+  pull-request:
     runs-on: ubuntu-latest
 
     #Setting the direction to execute actions
