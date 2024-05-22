@@ -1,7 +1,7 @@
 name: Hello World
 
 on:
-  workspace_dispatch:
+  workflow_dispatch:
 
 jobs:
   print-hello-world:
