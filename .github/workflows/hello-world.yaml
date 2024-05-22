@@ -1,0 +1,12 @@
+name: Hello World
+
+on:
+  workspace_dispatch:
+
+jobs:
+  print-hello-world:
+    runs-on: ubuntu-lastest
+
+    step:
+      - name: Say hello
+      - run: echo "Hello world"
